@@ -1,30 +1,35 @@
-# 🔍 Hackerrank:Python Program to Check if a String Ends with a Numeric Digit
+# 🏆 Hackerrank:Runner-Up Score Finder in Python
 
-This Python program checks whether the last character of a given input string is a **numeric digit (0–9)**.
-
----
-
-## 🎯 Aim
-
-To write a Python program that checks if a given string ends with a number using Python's built-in string methods.
+## 🎯 AIM:
+To write a Python program that takes a list of scores from participants and finds the **runner-up score** (i.e., the second-highest score), eliminating any duplicates.
 
 ---
 
-## 🧠 Algorithm
+## 🧠 ALGORITHM:
 
-1. **Start the program.**
-2. **Input** a string from the user.
-3. **Access** the last character using indexing (`string[-1]`).
-4. **Check** if the last character is a digit using the `.isdigit()` method.
-5. **If true**, print that the string ends with a number.
-6. **Else**, print that the string does not end with a number.
-7. **End the program.**
+1. **Start**
+2. Create a variable `n` and get its value from the user (number of participants)
+3. Read the list of `n` scores from the user using `input().split()` and convert them to integers
+4. Store the scores in a list
+5. Use `set()` to remove any duplicate scores
+6. Convert the set back to a list and sort it in ascending order
+7. Print the second-last element of the sorted list (i.e., the runner-up score)
+8. **Stop**
 
 ---
 
-## 💻  Program
-Add Code here
+## 💻 PROGRAM:
+```
+n = int(input())
+scores = list(map(int, input().split()))
+unique_scores = list(set(scores))
+unique_scores.sort()
+print(unique_scores[-2])
+```
 
-## Output
+## OUTPUT
+![image](https://github.com/user-attachments/assets/668d58c8-8a9a-4eab-bfaa-f030ed3aacd3)
 
-## Result
+## RESULT
+Thus, the program is verified successfully.
+
